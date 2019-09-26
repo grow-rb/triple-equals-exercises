@@ -3,7 +3,7 @@ require_relative 'my_before_callback'
 
 class MyBeforeCallbackTest < MiniTest::Test
   def test_symbol_false
-    assert_output(nil) { Foo.new.save }
+    assert_output('') { Foo.new.save }
   end
 
   def test_symbol_true
@@ -11,7 +11,7 @@ class MyBeforeCallbackTest < MiniTest::Test
   end
 
   def test_string_false
-    assert_output(nil) { Bar.new.save }
+    assert_output('') { Bar.new.save }
   end
 
   def test_string_true
@@ -19,7 +19,7 @@ class MyBeforeCallbackTest < MiniTest::Test
   end
 
   def test_proc_false
-    assert_output(nil) { Baz.new.save }
+    assert_output('') { Baz.new.save }
   end
 
   def test_proc_true
@@ -31,6 +31,6 @@ class MyBeforeCallbackTest < MiniTest::Test
   end
 
   def test_nil
-    assert_output(nil) { Fuga.new.save }
+    assert_output('') { Fuga.new.save }
   end
 end
